@@ -12,6 +12,7 @@ global.$ = {
   gulp: require('gulp'),
   del: require('del'),
   browserSync: require('browser-sync').create(),
+  rename: require("gulp-rename"),
   gp: require('gulp-load-plugins')()
 };
 
@@ -28,7 +29,8 @@ $.gulp.task('default', $.gulp.series(
     'js:process',
     'copy:image',
     'css:foundation',
-    'sprite:svg'
+    'sprite:svg',
+    'sprite'
   ),
   $.gulp.parallel(
     'watch',
