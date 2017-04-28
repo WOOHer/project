@@ -1,0 +1,60 @@
+.title {
+  font-size: 63px;
+  color: $black;
+  line-height: 125px;
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    display: block;
+    content: url('../img/decor/ellipse-big-left.svg');
+    position: absolute;
+    top: -15px;
+    left: 10px;
+  }
+
+  &:before {
+    display: block;
+    content: url('../img/decor/ellipse-big-right.svg');
+    position: absolute;
+    top: -15px;
+    right: 10px;
+  }
+}
+
+.subtitle {
+  font-size: 35px;
+  color: $gray;
+  line-height: 75px;
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    display: block;
+    content: url('../img/decor/ellipse-small-left.svg');
+    position: absolute;
+    top: -5px;
+    left: -30px;
+  }
+
+  &:before {
+    display: block;
+    content: url('../img/decor/ellipse-small-right.svg');
+    position: absolute;
+    top: -5px;
+    right: -30px;
+  }
+}
+
+.subtitle, .title {
+  margin-top: -25px;
+}
+
+.title__bg {
+  fill: $orange;
+  position: absolute;
+  left: 20px;
+  top: -45px;
+  z-index: 0;
+  opacity: .07;
+}

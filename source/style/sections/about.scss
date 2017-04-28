@@ -1,0 +1,45 @@
+.about {
+  display: flex;
+}
+
+.about__left, .about__right {
+  width: 50%;
+  position: relative;
+  justify-content: space-between;
+}
+
+.about__left {
+  background: #efeee9;
+  float: left;
+}
+
+.about__right {
+  background: #eeebdf;
+  float: right;
+}
+
+.about__pic {
+  width: 100%;
+  height: 390px;
+  margin-bottom: 40px;
+}
+
+.about__title_pos {
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+
+.about__title, .sub__title {
+  text-align: center;
+}
+
+.about__content {
+  width: 60%;
+  float: right;
+  overflow: hidden;
+}
+
+.about__content, .skills {
+  padding: 20px;
+}

@@ -1,0 +1,17 @@
+extends ../_template
+
+block variables
+    - var title = 'Мои работы'
+
+block content
+    section.section.hero
+        include ../common/_header
+        .about__user
+            .about__bg-title
+            include ../common/_user
+                svg.user__title__bg
+                    use(xlink:href="./assets/img/sprite.svg#works_header")
+        a(href="").down-arrow
+    include ../sections/_works
+    include ../sections/_testimonials
+

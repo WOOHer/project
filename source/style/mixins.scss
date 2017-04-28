@@ -1,0 +1,32 @@
+//inline-blocks
+@mixin inlineblock($valign: middle) {
+  display: inline-block;
+  vertical-align: $valign;
+}
+
+//breakpoints
+@mixin laptops() {
+  @media screen and (max-width: 1200px) {
+    @content
+  }
+}
+
+@mixin tablets() {
+  @media screen and (max-width: 768px) {
+    @content
+  }
+}
+
+@mixin phones() {
+  @media screen and (max-width: 480px) {
+    @content
+  }
+}
+
+//.class {
+//  @include phones {
+//    height: 300px;
+//    width: 200px;
+//    font-size: 13px;
+//  }
+//}

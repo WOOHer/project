@@ -1,0 +1,55 @@
+.skills__stats {
+  margin-top: 34px;
+}
+
+.skill-section {
+  padding-bottom: 14px;
+}
+
+.skill-section__title {
+  color: $gray;
+  @include roboto(medium);
+  font-size: 28px;
+  line-height: 62px;
+}
+
+.circle__first {
+  fill: none;
+  stroke: none;
+  stroke-width: 20px;
+}
+
+.circle__second{
+  stroke-width: 20px;
+  stroke: $orange;
+  fill: transparent;
+  stroke-dasharray: 256.52 314.15;
+}
+
+.circle__html {
+  stroke-width: 20px;
+  stroke: $orange;
+  fill: transparent;
+  stroke-dasharray: 56.52 314.15;
+}
+
+.skill-section__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.skill__name {
+  position: absolute;
+  color: $orange;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.skill {
+  position: relative;
+  @include roboto(medium);
+  font-size: 14px;
+  margin-right: 40px;
+}

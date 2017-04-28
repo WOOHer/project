@@ -1,0 +1,46 @@
+include ./../mixin/skills
+
+section.section.about
+    .about__left
+        svg(
+            viewbox="0 0 1000 160"
+            preserveAspectRatio="none"
+            class="triangal triangal_fill_white")
+            polygon(points="0,0 0,160 1000,160")
+        //+title('Обо мне', 'about_header.png', 'about__title_pos')
+        h1.title.about__title_pos Обо мне
+        svg.title__bg
+            use(xlink:href="./assets/img/sprite.svg#about_header")
+        .about__content
+            img(src="assets/img/user-sq.jpg", alt="").about__pic
+            .sub__title
+                h2.about__title.subtitle Кто я
+            .about__desc
+                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+    .about__right
+        svg(
+            viewbox="0 0 1000 160"
+            preserveAspectRatio="none"
+            class="triangal triangal_fill_beige")
+            polygon(points="0,160 1000,160 1000,0")
+        .skills
+            .skills__desc
+                .sub__title
+                    h2.subtitle Чем я могу быть вам полезен
+                .skills__text
+                        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+
+            +skills([{
+                'name': 'Frontend',
+                'skills': [{'name': 'HTML5', 'count': '156.52 314.15'}, {'name': 'HTML5', 'count': '56.52 314.15'}, {'name': 'HTML5', 'count': '56.52 314.15'}]
+            },
+            {
+                'name': 'Backend',
+                'skills': [{'name': 'CSS3', 'count': '56.52 314.15'}, {'name': 'HTML5', 'count': '156.52 314.15'}, {'name': 'HTML5', 'count': '56.52 314.15'}, {'name': 'HTML5', 'count': '56.52 314.15'}]
+            },
+            {
+                'name': 'Workflow',
+                'skills': [{'name': 'HTML5', 'count': '156.52 314.15'}, {'name': 'HTML5', 'count': '56.52 314.15'}, {'name': 'HTML5', 'count': '56.52 314.15'}]
+            }])
+

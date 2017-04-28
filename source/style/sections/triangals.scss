@@ -1,0 +1,29 @@
+.triangal {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+
+  &_fill {
+    &_white {
+      fill: #efeee9;
+    }
+
+    &_work {
+      fill: #faf8f0;
+      &_left {
+        bottom: 0;
+        width: 50%;
+      }
+
+      &_right {
+        bottom: 0;
+        width: 50%;
+        right: 0;
+      }
+    }
+
+    &_beige {
+      fill: #eeebdf;
+    }
+  }
+}
