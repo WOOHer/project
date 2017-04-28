@@ -10,6 +10,6 @@ module.exports = function () {
         }));
         var img=spriteData.img.pipe($.gulp.dest('build/assets/img/sprites'));
         var css=spriteData.css.pipe($.gp.rename({extname:'.scss'})).pipe($.gulp.dest('source/style/common'));
-        return $.merge(img, css);
+        return $.stream(img, css);
     });
 }
