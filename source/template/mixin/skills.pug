@@ -10,5 +10,5 @@ mixin skills(params)
                                 .skill
                                     svg(height="120", width="120").skill__circle
                                         circle(cx="60", cy="60", r="50").circle__first
-                                        circle(cx="60", cy="60", r="50", transform="rotate(-90 60 60)", stroke-dasharray="{skillName.count}").circle__second
+                                        circle(cx="60", cy="60", r="50", transform="rotate(-90 60 60)", stroke-dasharray=skillName.count).circle__second
                                         .skill__name= skillName.name
