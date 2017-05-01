@@ -11,13 +11,9 @@
 }
 
 .nav__item {
-  display: inline-block;
-  background: #efab26;
   padding: 14px 31px;
   text-decoration: none;
-  @include roboto(medium);
-  border-right: 2px solid #fff;
-  transition: .5s;
+  border-right: 2px solid rgba(#fff, .3);
 
   &:hover {
     background-color: $orange;
@@ -42,5 +38,51 @@
   &:hover {
     background-color: #ffffff;
     color: $orange;
+  }
+}
+
+.headline__btn {
+  padding: 13px 18px;
+  border-radius: 5px;
+}
+
+.btn__link {
+  fill: #fff;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.form__btns {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -2px;
+
+  &_send {
+    border-radius: 0 0 0 5px;
+  }
+
+  &_clear {
+    border-radius: 0 0 5px 0;
+  }
+
+  &_send, &_clear {
+    padding: 15px 30px;
+    width: 189px;
+    margin-left: 2px;
+  }
+}
+
+.nav__item, .form__btns_send, .form__btns_clear, .headline__btn {
+  background-color: #efab26;
+  color: #ffffff;
+  vertical-align: top;
+  transition: .5s;
+  @include roboto(medium);
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    background-color: $orange;
   }
 }

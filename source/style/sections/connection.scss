@@ -1,0 +1,63 @@
+.float-square__connection {
+  max-width: 380px;
+  padding: 0;
+  border-radius: 5pх;
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px 20px 20px;
+
+}
+
+.connect-form__title {
+  margin-bottom: 35px;
+}
+
+.input-area {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: gray;
+  width: 100%;
+}
+
+.text-area {
+  height: 140px;
+  resize: none;
+}
+
+input[type='text']::placeholder {
+  opacity: .5;
+}
+
+textarea[type='text']::placeholder {
+  opacity: .5;
+}
+
+textarea.input-area {
+  margin-bottom: 0;
+}
+
+.up-arrow {
+  height: 230px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.up-arrow__body {
+  height: 16px;
+  width: 26px;
+  fill: #fff;
+  border-radius: 1px;
+  transform: rotate(180deg);
+
+  &:hover {
+    opacity: .5;
+  }
+}

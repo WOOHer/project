@@ -1,3 +1,41 @@
 .works {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.headline {
+  background-color: #faf8f0;
+  height: 180px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.works__title-pos {
+  padding: 10px 50px;
+  margin-top: -140px;
+
+  .title__bg {
+    width: 100%;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before {
+    top: -5px;
+  }
+
+  &:after {
+    top: -5px;
+  }
+}
+
+.work__triangals {
   position: relative;
+  width: 100%;
+  height: 160px;
+  top: -160px;
 }

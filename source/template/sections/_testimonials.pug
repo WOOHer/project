@@ -1,29 +1,26 @@
 section.section.testimonials
-    h1.title.works__title-pos Что обо мне говорят
-    ul.testimonials__items
-        li.testimonials__item
-            .testimonials__text
-                p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-            .testimonials__reviewer
-                img(src="", alt="").reviewer__pic
-                .reviewer__info
-                    .reviewer__name Ковальчук Дмитрий
-                    .reviewer__ocupation основатель Loftschool
-        li.testimonials__item
-            .testimonials__text
-                p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-            .testimonials__reviewer
-                img(src="", alt="").reviewer__pic
-                .reviewer__info
-                    .reviewer__name Сабанцев Владимир
-                    .reviewer__ocupation Преподаватель
-    .float__square
-        h2.contact-form__title.subtitle
-        form(id="order-form", action="php/action.php", method="post", enctype="multipart/form-data")
-            label.input-block
-            input(type="text", name="name", placeholder="Имя").input-area
-            label.input-block
-            input(type="text", name="email", placeholder="Email").input-area
-            label.input-block
-            textarea(type="text", name="comments", placeholder="Ваше сообщение").input-area
+    .testimonials__content
+        h1.title.testimonials__title-pos Что обо мне говорят
+            svg.title__bg
+                use(xlink:href="./assets/img/sprite.svg#about_header")
+        ul.testimonials__items
+            li.testimonials__item
+                .testimonials__text
+                    p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviewer
+                    .reviewer__pic
+                        img(src="./assets/img/dk.jpg", alt="").reviewer__pic_margin_top
+                    .reviewer__info
+                        .reviewer__name Ковальчук Дмитрий
+                        .reviewer__ocupation основатель Loftschool
+            li.testimonials__item
+                .testimonials__text
+                    p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .reviewer
+                    .reviewer__pic
+                        img(src="./assets/img/vs.jpg", alt="")
+                    .reviewer__info
+                        .reviewer__name Сабанцев Владимир
+                        .reviewer__ocupation Преподаватель
+        include ./_connection
 

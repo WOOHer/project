@@ -1,31 +1,28 @@
 .title {
   font-size: 63px;
   color: $black;
-  line-height: 125px;
   position: relative;
-  z-index: 1;
 
-  &:after {
+  &:before, &:after {
     display: block;
-    content: url('../img/decor/ellipse-big-left.svg');
     position: absolute;
     top: -15px;
-    left: 10px;
+  }
+
+  &:after {
+    content: url('../img/decor/ellipse-big-left.svg');
+    left: 0;
   }
 
   &:before {
-    display: block;
     content: url('../img/decor/ellipse-big-right.svg');
-    position: absolute;
-    top: -15px;
-    right: 10px;
+    right: 0;
   }
 }
 
 .subtitle {
   font-size: 35px;
   color: $gray;
-  line-height: 75px;
   display: inline-block;
   position: relative;
 
@@ -46,15 +43,14 @@
   }
 }
 
-.subtitle, .title {
-  margin-top: -25px;
-}
+//.subtitle, .title {
+//  margin-top: -25px;
+//}
 
 .title__bg {
   fill: $orange;
   position: absolute;
-  left: 20px;
-  top: -45px;
+  margin: 0 auto;
   z-index: 0;
   opacity: .07;
 }

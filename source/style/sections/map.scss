@@ -6,4 +6,11 @@
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yandex-map {
+  position: absolute;
 }

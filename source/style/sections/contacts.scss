@@ -1,8 +1,13 @@
-.float-square__contacts {
-  padding: 40px;
-  background-color: rgba(#fff, .85);
+.contacts {
   margin-top: -73px;
-  width: 380px;
+
+  &__float-square {
+    padding: 30px 20px;
+    background-color: rgba(#fff, .85);
+    margin-top: -73px;
+    width: 380px;
+    border-radius: 5px;
+  }
 }
 
 .contacts__link {
