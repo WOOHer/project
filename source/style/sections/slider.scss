@@ -71,10 +71,6 @@
   flex-wrap: nowrap;
   justify-content: center;
 
-  &_bg {
-    background-color: ($black, .7);
-  }
-
   &_left {
     background: url('../img/slide_2.png') center center no-repeat;
     background-size: cover;
@@ -110,3 +106,4 @@
     opacity: .5;
   }
 }
+
