@@ -4,13 +4,20 @@ block variables
     - var title = 'Блог'
 
 block content
-    section.section.hero
-        include ../common/_header
-        .blog-headline
-            .user__pic(style="background-image: url('assets/img/user.jpg');")
-            h1.title.blog__title_pos Блог
-    svg.triangal.triangal_fill_white
-    svg.triangal.triangal_fill_white
-    include ../sections/_sidebar
-    include ../sections/_blog
+    .blog
+        .wrapper
+            section.section.hero
+                include ../common/_header
+                .blog-headline
+                    .user__pic(style="background-image: url('assets/img/user.jpg');")
+                    h1.title.blog__title_pos Блог
+                        svg.title__bg
+                            use(xlink:href="./assets/img/sprite.svg#blog_header")
+                    p.blog__subtitle Статьи, которые я написал
+            .blog__triangals
+                include ../sections/_triangals
+            .section.blog__content
+                include ../common/_sidebar
+                include ../sections/_blog
+        include ../common/_footer
 

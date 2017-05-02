@@ -1,7 +1,7 @@
 .footer {
   height: $footerh;
   background-color: rgba($black, .85);
-  margin-top: -$footerh;
+  //margin-top: -$footerh;
   position: relative;
   display: flex;
   color: #fff;
@@ -70,6 +70,10 @@
 
 .made-by {
   opacity: .5;
+}
+
+.content .footer {
+  margin-top: -$footerh;
 }
 
 

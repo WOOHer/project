@@ -1,0 +1,16 @@
+.blog__menu {
+  display: flex;
+  width: 25%;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.blog__menu_item {
+}
+
+.blog__menu_item a {
+  color: $black;
+  padding: 20px 0;
+}

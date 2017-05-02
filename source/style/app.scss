@@ -17,6 +17,7 @@ $red: #e44845;
 @import 'common/fonts';
 @import 'common/layout';
 @import 'common/footer';
+@import 'common/sidebar';
 @import '../../node_modules/font-awesome/scss/font-awesome';
 
 //sections
@@ -37,3 +38,4 @@ $red: #e44845;
 @import 'sections/works';
 @import 'sections/slider';
 @import 'sections/connection';
+@import 'sections/blog';
