@@ -38,6 +38,10 @@ textarea[type='text']::placeholder {
   opacity: .5;
 }
 
+input[type='password']::placeholder {
+  opacity: .5;
+}
+
 textarea.input-area {
   margin-bottom: 0;
 }
