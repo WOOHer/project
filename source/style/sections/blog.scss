@@ -12,10 +12,22 @@
   justify-content: space-between;
   margin-top: -160px;
   background-color: #faf8f0;
+  padding-top: 42px;
 }
 
 .blog__list {
   width: 75%;
+  padding: 12px 400px 0 0;
+}
+
+.blog__item {
+  border-bottom: 5px solid rgba($black, .07);
+  margin-bottom: 70px;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
 }
 
 .blog-headline {
@@ -72,4 +84,20 @@
     content: url('../img/decor/blog_title_right.svg');
     right: 0;
   }
+}
+
+.item__title {
+  line-height: 40px;
+  margin-bottom: 26px;
+  &:after, &:before {
+  display: none;
+  }
+}
+
+.item__date {
+  color: $orange;
+}
+
+.item__text {
+  padding: 30px 30px 70px 0;
 }
