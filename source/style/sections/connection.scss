@@ -20,9 +20,27 @@
   padding: 10px;
   border: none;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: $input-area-margin;
+  height: $input-area-height;
   color: gray;
   width: 100%;
+  position: relative;
+
+  &__login, &__password {
+    padding-left: 65px;
+  }
+
+  &__prev {
+    position: absolute;
+    background-color: #f0efe9;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px 0 0 5px;
+
+    &_pass {
+      margin-top: $input-area-margin + $input-area-height;
+    }
+  }
 }
 
 .text-area {

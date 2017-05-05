@@ -7,18 +7,26 @@
 //breakpoints
 @mixin laptops() {
   @media screen and (max-width: 1200px) {
-    @content
+    @content;
   }
 }
 
 @mixin tablets() {
   @media screen and (max-width: 768px) {
-    @content
+    @content;
   }
 }
 
 @mixin phones() {
   @media screen and (max-width: 480px) {
-    @content
+    @content;
   }
+}
+
+//centronizer
+@mixin centrize() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

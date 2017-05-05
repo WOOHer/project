@@ -3,8 +3,14 @@ section.section.login
         .login__content
             h2.login__title.subtitle АВТОРИЗУЙТЕСЬ
             form(id="login-form", class="login-form" action="php/action.php", method="post", enctype="multipart/form-data")
-                input(type="text", name="name", placeholder="Логин").input-area
-                input(type="password", name="password", placeholder="Пароль").input-area
+                input(type="text", name="name", placeholder="Логин").input-area.input-area__login
+                .input-area__prev.input-area__prev_log
+                        svg.input__bg.input__bg_log
+                            use(xlink:href="./assets/img/sprite.svg#login")
+                input(type="password", name="password", placeholder="Пароль").input-area.input-area__password
+                .input-area__prev.input-area__prev_pass
+                        svg.input__bg.input__bg_pass
+                            use(xlink:href="./assets/img/sprite.svg#password")
                 .human-checkbox
                     label(class="input-radio")
                         input(type="radio" class="radio" checked)
@@ -18,8 +24,10 @@ section.section.login
                         label(class="input-radio")
                             input(type="radio" class="clear-radio")
                             .bot-radio Не уверен
-        .login-btns
-            .main-btn
-            .login-btn
+        ul.login-btns
+            li.main-btn
+                a(href="", title="index.html") На главную
+            li.login-btn
+                a(href="", title="#") Войти
 
 

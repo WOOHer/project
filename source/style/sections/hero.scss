@@ -8,6 +8,7 @@
 
   &__blog {
     height: 396px;
+    background-position: center center;
   }
 }
 
@@ -29,17 +30,14 @@
   z-index: 1;
 
   &:hover {
-    opacity: .5;
+    border-color:  rgba(#fff, 1);
   }
 }
 
 .user__title-bg {
-  width: 1170px;
+  width: 95%;
   height: 313px;
   fill: $orange;
   fill-opacity: .1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @include centrize;
 }

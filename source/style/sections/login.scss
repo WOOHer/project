@@ -1,6 +1,5 @@
 .float-square_login {
-  padding: 35px 20px 0;
-
+  display: none;
   & .input-area {
     width: 340px;
   }
@@ -10,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px 20px 0;
 }
 
 .login-form {
@@ -19,6 +19,7 @@
 
 .login__title {
   color: #ffffff;
+  margin-bottom: 30px;
 
   &.subtitle {
     font-weight: 300;
@@ -31,10 +32,6 @@
       content: url('../img/decor/ellipsew-small-right.svg');
     }
   }
-}
-
-.input-area__login {
-  width: 340px;
 }
 
 .input-radio, .bot-checkboxes {
@@ -81,13 +78,19 @@
   color: rgba(#ffffff, .8);
 }
 
+.human-checkbox {
+  margin-bottom: 16px;
+}
+
 .bot-checkbox {
   text-align: center;
   color: rgba(#ffffff, .8);
+  margin-bottom: 39px;
 
   & p {
     font-weight: bold;
     color: rgba(#ffffff, .8);
+    margin-bottom: 10px;
   }
 }
 
@@ -124,4 +127,12 @@
 
 .bot-radio__yes {
   margin-right: 40px;
+}
+
+.input__bg {
+  width: 18px;
+  height: 17px;
+  fill: #c4cbcd;
+  @include centrize;
+  z-index: 1;
 }

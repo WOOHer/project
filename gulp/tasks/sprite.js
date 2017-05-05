@@ -8,7 +8,7 @@ module.exports = function () {
                 imgPath: './assets/img/sprite.png'
 
         }));
-        var img=spriteData.img.pipe($.gulp.dest('build/assets/img/sprites'));
+        var img=spriteData.img.pipe($.gulp.dest('build/assets/img/png-sprites'));
         var css=spriteData.css.pipe($.gp.rename({extname:'.scss'})).pipe($.gulp.dest('source/style/common'));
         return $.stream(img, css);
     });

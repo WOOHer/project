@@ -11,9 +11,17 @@
 }
 
 .nav__item {
-  padding: 14px 31px;
+  padding: 12px 31px;
   text-decoration: none;
   border-right: 2px solid rgba(#fff, .3);
+
+  &:first-child {
+    border-radius: 0 0 0 5px;
+  }
+
+  &:last-child {
+    border-radius: 0 0 5px 0;
+  }
 
   &:hover {
     background-color: $orange;
@@ -38,6 +46,17 @@
   &:hover {
     background-color: #ffffff;
     color: $orange;
+  }
+
+  @include laptops {
+    right: 20px;
+  }
+
+  @include phones {
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    text-align: center;
   }
 }
 
@@ -73,7 +92,7 @@
   }
 }
 
-.nav__item, .form__btns_send, .form__btns_clear, .headline__btn {
+.nav__item, .form__btns_send, .form__btns_clear, .headline__btn, .main-btn, .login-btn {
   background-color: #efab26;
   color: #ffffff;
   vertical-align: top;
@@ -85,4 +104,23 @@
   &:hover {
     background-color: $orange;
   }
+}
+
+.login-btns {
+  display: flex;
+  align-items: center;
+}
+
+.main-btn, .login-btn {
+  padding: 12px 30px;
+  width: 100%;
+}
+
+.login-btn {
+  border-left: 2px solid rgba(#fff, .3);
+  border-radius: 0 0 5px 0;
+}
+
+.main-btn {
+  border-radius: 0 0 0 5px;
 }

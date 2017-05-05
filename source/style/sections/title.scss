@@ -2,11 +2,13 @@
   font-size: 63px;
   color: $black;
   position: relative;
+  line-height: 60px;
+  z-index: 99;
 
   &:before, &:after {
     display: block;
     position: absolute;
-    top: -15px;
+    top: -5px;
   }
 
   &:after {

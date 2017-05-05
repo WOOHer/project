@@ -1,5 +1,7 @@
 //vars
 $footerh: 147px;
+$input-area-margin: 20px;
+$input-area-height: 45px;
 
 //colors
 $gray: #5d5a55;
@@ -14,6 +16,7 @@ $red: #e44845;
 @import 'mixins';
 
 //common
+@import 'common/media';
 @import 'common/fonts';
 @import 'common/layout';
 @import 'common/footer';

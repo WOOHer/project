@@ -6,6 +6,15 @@
   display: flex;
   color: #fff;
 
+  & .social__item:hover {
+    fill: #fff;
+    opacity: 1;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+
   &__link:hover {
     color: $orange;
     transition: .5s;

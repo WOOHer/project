@@ -1,9 +1,18 @@
 .skills__stats {
   margin-top: 34px;
+  padding-right: 110px;
 }
 
 .skill-section {
-  padding-bottom: 14px;
+  padding: 0 10px 14px 0;
+}
+
+.skill-section__item {
+  margin-right: 7%;
+
+  @include laptops {
+    margin: 0 4% 5% 0;
+  }
 }
 
 .skill-section__title {
@@ -35,6 +44,13 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  padding-right: 10px;
+
+  @include laptops {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -150px;
+  }
 }
 
 .skill__name {
@@ -49,5 +65,4 @@
   position: relative;
   @include roboto(medium);
   font-size: 14px;
-  margin-right: 40px;
 }
