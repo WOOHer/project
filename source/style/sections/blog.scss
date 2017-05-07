@@ -17,16 +17,22 @@
 
 .blog__list {
   width: 75%;
-  padding: 12px 400px 0 0;
+  padding: 12px 20px 0 0;
 }
 
 .blog__item {
   border-bottom: 5px solid rgba($black, .07);
   margin-bottom: 70px;
+  width: 75%;
+  overflow: hidden;
 
   &:last-child {
     border-bottom: none;
     margin-bottom: 0;
+  }
+
+  @include laptops {
+    width: 90%;
   }
 }
 
