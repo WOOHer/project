@@ -2,9 +2,24 @@
   height: $footerh;
   background-color: rgba($black, .85);
   //margin-top: -$footerh;
-  position: relative;
   display: flex;
   color: #fff;
+  position: relative;
+
+  @include tablets {
+    flex-wrap: wrap;
+    height: 225px;
+  }
+
+  //&__socials {
+  //  @include phones {
+  //    margin-bottom: 20px;
+  //  }
+  //}
+
+  & .social__item_white {
+    opacity: .5;
+  }
 
   & .social__item:hover {
     fill: #fff;
@@ -18,6 +33,14 @@
   &__link:hover {
     color: $orange;
     transition: .5s;
+  }
+
+  &__left {
+    & p {
+      @include laptops {
+        font-size: 15px;
+      }
+    }
   }
 
   &__middle {
@@ -51,22 +74,42 @@
 
   &__menu {
     margin-bottom: 10px;
+
+    @include phones {
+      margin-top: 10px;
+    }
   }
 
   &__item {
     display: inline-block;
     margin: 0 40px 5px 0;
+
+    @include lowres {
+      margin-right: 20px;
+    }
   }
 
-  &__socials {
-    position: absolute;
-    bottom: 26px;
+  &__link {
+    white-space: nowrap;
+  }
+
+  @include phones {
+    height: 100%;
   }
 }
 
 .footer__left, .footer__middle, .footer__right {
   width: calc(100% / 3);
   padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  @include netbooks {
+    padding-bottom: 15px;
+    padding-top: 18px;
+  }
 }
 
 .footer__left, .footer__right {
@@ -77,12 +120,82 @@
   }
 }
 
-.made-by {
-  opacity: .5;
-}
-
 .about__footer {
   margin-top: -$footerh;
+
+  @include tablets {
+    margin-top: -$footerh - 78px;
+  }
+}
+
+.footer__left {
+  @include tablets {
+    width: 94%;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    & p {
+      flex-wrap: wrap;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(#fff, .2);
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.footer__middle {
+  @include tablets {
+    width: 55%;
+    justify-content: flex-start;
+  }
+
+  @include phones {
+    padding: 0 20px 15px;
+  }
+
+  &:before, &:after {
+    @include tablets {
+      display: none;
+    }
+  }
+}
+
+.footer__right {
+  @include tablets {
+    justify-content: flex-end;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @include phones {
+    width: 45%;
+    padding: 10px 20px 0 0;
+    margin-top: -10px;
+  }
+}
+
+.made-by {
+  opacity: .5;
+
+  @include tablets {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  & p {
+    margin-right: 10px;
+  }
 }
 
 

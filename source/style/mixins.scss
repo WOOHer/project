@@ -12,6 +12,12 @@
 }
 
 @mixin netbooks() {
+  @media screen and (max-width: 1064px) {
+    @content;
+  }
+}
+
+@mixin lowres () {
   @media screen and (max-width: 992px) {
     @content;
   }
@@ -25,6 +31,12 @@
 
 @mixin phones() {
   @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin iphones() {
+  @media screen and (max-width: 320px) {
     @content;
   }
 }

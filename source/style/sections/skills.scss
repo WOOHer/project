@@ -1,10 +1,26 @@
 .skills__stats {
   margin-top: 34px;
   padding-right: 110px;
+
+  @include lowres {
+    padding-right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
 }
 
 .skill-section {
   padding: 0 10px 14px 0;
+
+  @include lowres {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .skill-section__item {
@@ -13,6 +29,10 @@
   @include laptops {
     margin: 0 4% 5% 0;
   }
+
+  @include lowres {
+    margin-right: 0;
+  }
 }
 
 .skill-section__title {
@@ -20,6 +40,10 @@
   @include roboto(medium);
   font-size: 28px;
   line-height: 62px;
+
+  @include lowres {
+    width: 100%;
+  }
 }
 
 .circle__first {
@@ -48,8 +72,14 @@
 
   @include laptops {
     flex-wrap: wrap;
-    justify-content: space-between;
     margin-right: -150px;
+  }
+
+  @include lowres {
+    width: 100%;
+    justify-content: space-around;
+    margin-right: 0;
+    padding-right: 0;
   }
 }
 
@@ -65,4 +95,19 @@
   position: relative;
   @include roboto(medium);
   font-size: 14px;
+}
+
+.skills {
+  @include lowres {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    &__item {
+      @include lowres {
+        width: 100%;
+      }
+    }
+  }
 }

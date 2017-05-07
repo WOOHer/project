@@ -1,23 +1,32 @@
 .about {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+
+  &__triangals {
+    position: relative;
+    width: 100%;
+  }
+
+  @include lowres {
+    flex-wrap: wrap;
+  }
 
   @include laptops {
 
   }
 
-  @include tablets {
-
-  }
-
   @include phones {
-    width: 95%;
+    width: 100%;
   }
 }
 
 .about__left, .about__right {
   position: relative;
   width: 50%;
+
+  @include lowres {
+    width: 100%;
+  }
 }
 
 .about__left {
@@ -27,11 +36,20 @@
 
   @include laptops {
     flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  @include phones {
+    padding-right: 0;
   }
 }
 
 .about__right {
   background: #eeebdf;
+
+  @include laptops {
+    padding-top: 40px;
+  }
 }
 
 .about__pic {
@@ -39,6 +57,11 @@
   overflow: hidden;
   height: 390px;
   width: 443px;
+
+  @include lowres {
+    width: 473px;
+    height: 416px;
+  }
 }
 
 .about__title-pos {

@@ -3,9 +3,29 @@
   bottom: 100%;
   width: 100%;
 
+  @include tablets {
+    width: 50%;
+  }
+
   &_fill {
     &_white {
       fill: #efeee9;
+    }
+
+    &_about {
+      position: absolute;
+      &_left {
+        fill: #EFEEE9 !important;
+      }
+
+      &_right {
+        fill: #eeebdf !important;
+
+        @include tablets {
+          width: 50%;
+          fill: #efeee9 !important;
+        }
+      }
     }
 
     &_work {
@@ -20,10 +40,6 @@
         width: 50%;
         right: 0;
       }
-    }
-
-    &_beige {
-      fill: #eeebdf;
     }
   }
 }

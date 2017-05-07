@@ -2,15 +2,24 @@
   position: relative;
   height: 900px;
   width: 100%;
-  background: url('../img/map.jpg') no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include iphones {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 .yandex-map {
-  position: absolute;
+  position: static;
+  height: 900px;
+  width: 100%;
+  z-index: -1;
+
+  @incclude iphones {
+    position: static;
+  }
 }
