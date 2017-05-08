@@ -1,26 +1,23 @@
 .hamburger {
-
+  display: block;
+  height: 100%;
   &__line {
     height: 4px;
     width: 35px;
     border-radius: 3px;
     background-color: #fff;
-    position: relative;
     transition: 0.3s;
     z-index: 9999;
 
-    &_one {
-      position: absolute;
-      top: 30px;
+    &_one {;
     }
 
     &_two {
-      position: relative;
+      margin-top: 8px;
     }
 
     &_three {
-      position: absolute;
-      top: 54px;
+      margin-top: 8px;
     }
   }
 

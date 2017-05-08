@@ -1,25 +1,17 @@
 .map {
-  position: relative;
   height: 900px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @include iphones {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
 }
 
 .yandex-map {
-  position: static;
+  position: relative;
   height: 900px;
   width: 100%;
   z-index: -1;
 
-  @incclude iphones {
+
+  @include iphones {
     position: static;
+    height: 100%;
   }
 }

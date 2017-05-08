@@ -11,35 +11,40 @@
     &_white {
       fill: #efeee9;
     }
+  }
+}
 
-    &_about {
-      position: absolute;
-      &_left {
-        fill: #EFEEE9 !important;
-      }
+.fill_about {
+  position: absolute;
 
-      &_right {
-        fill: #eeebdf !important;
+  &_left {
+    fill: #EFEEE9 !important;
+  }
 
-        @include tablets {
-          width: 50%;
-          fill: #efeee9 !important;
-        }
-      }
-    }
+  &_right {
+    fill: #eeebdf;
+  }
+}
 
-    &_work {
-      fill: #faf8f0;
-      &_left {
-        bottom: 0;
-        width: 50%;
-      }
+.about_right_tab {
+  @include lowres {
+    width: 50%;
+    fill: #efeee9 !important;
+  }
+}
 
-      &_right {
-        bottom: 0;
-        width: 50%;
-        right: 0;
-      }
-    }
+.fill_work {
+
+  &_left {
+    fill: #faf8f0 !important;
+    bottom: 0;
+    width: 50%;
+  }
+
+  &_right {
+    fill: #faf8f0 !important;
+    bottom: 0;
+    width: 50%;
+    right: 0;
   }
 }

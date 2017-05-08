@@ -11,25 +11,43 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  @include tablets {
+    height: 100%;
+  }
 }
 
 .works__title-pos {
   padding: 10px 50px;
   margin-top: -140px;
 
+  @include tablets {
+    top: 10px;
+  }
+
   .title__bg {
     width: 100%;
     left: 50%;
     top: 30%;
     transform: translate(-50%, -50%);
+
+    @include tablets {
+      top: 35px;
+    }
   }
 
   &:before {
     top: -5px;
+    @include tablets {
+      top: 21px;
+    }
   }
 
   &:after {
     top: -5px;
+    @include tablets {
+      top: 21px;
+    }
   }
 }
 

@@ -11,10 +11,6 @@
     flex-wrap: wrap;
   }
 
-  @include laptops {
-
-  }
-
   @include phones {
     width: 100%;
   }
@@ -86,6 +82,20 @@
 .about__title, .sub__title {
   text-align: center;
   margin-bottom: 20px;
+
+  & .subtitle {
+    &:before{
+      @include iphones {
+        right: -35px;
+      }
+    }
+
+    &:after {
+      @include iphones {
+        left: -35px;
+      }
+    }
+  }
 }
 
 .about__content {

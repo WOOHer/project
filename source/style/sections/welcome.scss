@@ -8,6 +8,10 @@
   justify-content: center;
   align-items: center;
 
+  & .social__item {
+    opacity: .7;
+  }
+
   & .social__item:hover {
     fill: #fff;
     opacity: 1;

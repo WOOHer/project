@@ -53,10 +53,10 @@
   width: 100%;
   height: 160px;
   top: -160px;
-}
 
-.triangal_fill_blog {
-  fill: #faf8f0;
+  & .triangal_fill_blog {
+      fill: #faf8f0 !important;
+  }
 }
 
 .blog__title_pos {

@@ -98,6 +98,24 @@
 }
 
 .skills {
+
+  & .subtitle {
+    &:before{
+      @include iphones {
+        right: -5px;
+      }
+    }
+
+    &:after {
+      @include iphones {
+        left: -5px;
+      }
+    }
+  }
+
+  &__desc {
+    text-align: left;
+  }
   @include lowres {
     display: flex;
     justify-content: center;

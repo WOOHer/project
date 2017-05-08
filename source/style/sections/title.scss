@@ -17,6 +17,12 @@
     @include lowres {
       top: -1px;
     }
+
+    @include tablets {
+      top: 10px;
+      font-size: 35px;
+      line-height: 30px;
+    }
   }
 
   &:after {
@@ -46,6 +52,10 @@
     position: absolute;
     top: -5px;
     left: -30px;
+
+    @include iphones {
+      left: -10px;
+    }
   }
 
   &:before {
@@ -54,6 +64,10 @@
     position: absolute;
     top: -5px;
     right: -30px;
+
+    @include iphones {
+      right: -10px;
+    }
   }
 }
 

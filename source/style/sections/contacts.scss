@@ -1,19 +1,53 @@
 .contacts {
+  @include centrize;
+  margin-top: -73px;
+
+  @include iphones {
+    position: static;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+
   &__float-square {
     padding: 30px 20px;
     background-color: rgba(#fff, .85);
-    margin-top: -73px;
     width: 380px;
     border-radius: 5px;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     @include tablets {
       margin-top: -225px;
     }
 
     @include iphones {
-      position: static;
       margin-top: 0;
+    }
+  }
+
+  & .title__block {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .subtitle {
+      &:before{
+        @include iphones {
+          right: -40px;
+        }
+      }
+
+      &:after {
+        @include iphones {
+          left: -40px;
+        }
+      }
     }
   }
 }
@@ -26,6 +60,10 @@
 .contacts__item {
   margin: 15px 0;
   opacity: .8;
+
+  @include iphones {
+    line-height: 28px;
+  }
 }
 
 .contacts__text {
@@ -51,4 +89,8 @@
   color: $orange;
   font-size: 30px;
   flex: 1;
+}
+
+.contacts__items {
+  width: 100%;
 }
