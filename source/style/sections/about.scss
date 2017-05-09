@@ -84,6 +84,10 @@
     width: 100%;
     left: 0;
     top: -43px;
+
+    @include tablets {
+      top: -54px;
+    }
   }
 
   &:before {
@@ -101,13 +105,13 @@
 
   & .subtitle {
     &:before{
-      @include iphones {
+      @include phones {
         right: -35px;
       }
     }
 
     &:after {
-      @include iphones {
+      @include phones {
         left: -35px;
       }
     }

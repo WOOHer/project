@@ -19,7 +19,7 @@
     }
 
     @include tablets {
-      top: 10px;
+      top: 20px;
       font-size: 35px;
       line-height: 30px;
     }
@@ -28,11 +28,19 @@
   &:after {
     content: url('../img/decor/ellipse-big-left.svg');
     left: 0;
+
+    @include phones {
+      left: -9px;
+    }
   }
 
   &:before {
     content: url('../img/decor/ellipse-big-right.svg');
     right: 0;
+
+    @include phones {
+      right: -9px;
+    }
   }
 }
 

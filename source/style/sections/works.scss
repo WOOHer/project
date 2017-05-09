@@ -23,6 +23,11 @@
 
   @include tablets {
     top: 10px;
+    text-align: center;
+  }
+
+  @include iphones {
+    top: -10px;
   }
 
   .title__bg {
@@ -34,6 +39,10 @@
     @include tablets {
       top: 35px;
     }
+
+    @include iphones {
+      top: 73px;
+    }
   }
 
   &:before {
@@ -41,12 +50,22 @@
     @include tablets {
       top: 21px;
     }
+
+    @include iphones {
+      top: 53px;
+      right: 35px;
+    }
   }
 
   &:after {
     top: -5px;
     @include tablets {
       top: 21px;
+    }
+
+    @include iphones {
+      top: 53px;
+      left: 35px;
     }
   }
 }

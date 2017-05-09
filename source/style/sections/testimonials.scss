@@ -94,7 +94,7 @@
   @include phones {
     padding: 0 20px;
     flex-wrap: wrap;
-    margin-top: 70px;
+    margin-top: 10px;
   }
 }
 
@@ -107,7 +107,8 @@
   align-self: baseline;
 
   @include phones {
-    margin-top: 30px;
+    margin-top: 90px;
+    width: 100%;
   }
 }
 

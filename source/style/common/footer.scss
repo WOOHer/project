@@ -227,6 +227,8 @@
 
 .made-by {
   opacity: .5;
+  display: flex;
+  flex-wrap: wrap;
 
   @include tablets {
     width: 100%;
