@@ -23,6 +23,7 @@
 
   @include tablets {
     width: 100%;
+    padding: 60px;
   }
 }
 
@@ -39,11 +40,19 @@
     &:before {
       top: 20px;
       right: -25px;
+
+      @include phones {
+        right: -15px;
+      }
     }
 
     &:after {
       top: 20px;
       left: -25px;
+
+      @include phones {
+        left: -15px;
+      }
     }
   }
 }
@@ -72,6 +81,11 @@
   @include tablets {
     width: 100%;
     order: -1;
+    padding: 58px;
+  }
+
+  @include iphones {
+    padding: 22px;
   }
 
   &_pic {
@@ -102,6 +116,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablets {
+      padding: 110px;
+    }
+
+    @include phones {
+      padding: 88px;
+    }
+
+    @include iphones {
+      padding: 58px;
+    }
 
     &:after {
       content: "";

@@ -1,6 +1,7 @@
 .hamburger {
   display: block;
   height: 100%;
+  z-index: 99;
   &__line {
     height: 4px;
     width: 35px;

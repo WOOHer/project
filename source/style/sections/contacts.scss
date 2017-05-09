@@ -2,7 +2,7 @@
   @include centrize;
   margin-top: -73px;
 
-  @include iphones {
+  @include phones {
     position: static;
     margin-top: 0;
     top: 0;
@@ -22,11 +22,12 @@
     flex-direction: column;
 
     @include tablets {
-      margin-top: -225px;
+      margin-top: -50px;
     }
 
-    @include iphones {
+    @include phones {
       margin-top: 0;
+      width: 100%;
     }
   }
 
@@ -38,13 +39,13 @@
 
     & .subtitle {
       &:before{
-        @include iphones {
+        @include phones {
           right: -40px;
         }
       }
 
       &:after {
-        @include iphones {
+        @include phones {
           left: -40px;
         }
       }

@@ -10,14 +10,40 @@
   width: 100%;
 
   .title {
+    @include phones {
+      font-size: 35px;
+      line-height: 40px;
+      margin-top: 40px;
+    }
+
     &:before {
-      top: 30px;
+      top: 55px;
       right: 20px;
+
+      @include tablets {
+        top: 75px;
+        right: 40px;
+      }
+
+      @include phones {
+        top: 28px;
+        right: -28px;
+      }
     }
 
     &:after {
-      top: 30px;
+      top: 55px;
       left: 20px;
+
+      @include tablets {
+        top: 75px;
+        left: 40px;
+      }
+
+      @include phones {
+        top: 28px;
+        left: -28px;
+      }
     }
   }
 }
@@ -30,6 +56,12 @@
   width: 500px;
   height: 175px;
 
+  @include phones {
+    height: auto;
+    width: 250px;
+    padding: 0 20px;
+  }
+
   .title__bg {
     width: 499px;
     height: 175px;
@@ -38,6 +70,11 @@
     transform: translate(-50%, -50%);
     fill: $orange;
     margin-top: 35px;
+
+    @include phones {
+      width: 120%;
+      margin-top: -10px;
+    }
   }
 }
 
@@ -52,11 +89,26 @@
   display: flex;
   margin-top: 107px;
   margin-left: -20px;
+  padding: 0 20px;
+
+  @include phones {
+    padding: 0 20px;
+    flex-wrap: wrap;
+    margin-top: 70px;
+  }
 }
 
 .testimonials__item {
   height: 230px;
   margin-left: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+
+  @include phones {
+    margin-top: 30px;
+  }
 }
 
 .testimonials__text {
@@ -70,6 +122,11 @@
     width: 33px;
     height: 27px;
     top: -56px;
+
+    @include phones {
+      left: 50%;
+      transform: translate(-50%);
+    }
   }
 }
 

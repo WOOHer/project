@@ -5,6 +5,22 @@
   &__triangals {
     position: relative;
     width: 100%;
+
+    .fill_about {
+      position: absolute;
+
+      &_left {
+        fill: #EFEEE9 !important;
+      }
+
+      &_right {
+        fill: #eeebdf !important;
+
+        @include lowres {
+          fill: #EFEEE9 !important;
+        }
+      }
+    }
   }
 
   @include lowres {

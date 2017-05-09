@@ -26,10 +26,20 @@
 
     &:after {
       content: url('../img/decor/ellipsew-small-left.svg');
+
+      @include iphones {
+        left: -35px;
+        top: -3px;
+      }
     }
 
     &:before {
       content: url('../img/decor/ellipsew-small-right.svg');
+
+      @include iphones {
+        right: -35px;
+        top: -3px;
+      }
     }
   }
 }

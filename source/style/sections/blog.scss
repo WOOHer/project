@@ -7,17 +7,38 @@
   }
 }
 
+.hero__blog {
+  @include tablets {
+    height: 558px;
+  }
+
+  @include phones {
+    height: 558px;
+  }
+}
+
 .blog__content {
   display: flex;
   justify-content: space-between;
   margin-top: -160px;
   background-color: #faf8f0;
   padding-top: 42px;
+
+  @include tablets {
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .blog__list {
   width: 75%;
   padding: 12px 20px 0 0;
+
+  @include tablets {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .blog__item {
@@ -33,6 +54,10 @@
 
   @include laptops {
     width: 90%;
+  }
+
+  @include tablets {
+    width: 100%;
   }
 }
 
@@ -73,10 +98,18 @@
 
   &:before {
     top: -5px;
+
+    @include tablets {
+      top: 23px;
+    }
   }
 
   &:after {
     top: -5px;
+
+    @include tablets {
+    top: 23px;
+  }
   }
 }
 
@@ -84,11 +117,19 @@
   &:after {
     content: url('../img/decor/blog_title_left.svg');
     left: 0;
+
+    @include tablets {
+      left: -10px;
+    }
   }
 
   &:before {
     content: url('../img/decor/blog_title_right.svg');
     right: 0;
+
+    @include tablets {
+      right: -10px;
+    }
   }
 }
 
@@ -106,4 +147,20 @@
 
 .item__text {
   padding: 30px 30px 70px 0;
+
+  @include tablets {
+    padding-right: 0;
+  }
+}
+
+.text__img-box {
+  width: 100%;
+  overflow: scroll;
+}
+
+.down-arrow__blog {
+  display: none;
+  @include lowres {
+    display: block;
+  }
 }
