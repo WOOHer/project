@@ -2,29 +2,67 @@
   display: block;
   height: 100%;
   z-index: 99;
-  &__line {
+  height: 4px;
+  width: 35px;
+  border-radius: 3px;
+  background-color: #fff;
+
+  &:hover {
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    display: block;
+    content: "";
     height: 4px;
     width: 35px;
     border-radius: 3px;
     background-color: #fff;
-    transition: 0.3s;
-    z-index: 9999;
-
-    &_one {;
-    }
-
-    &_two {
-      margin-top: 8px;
-    }
-
-    &_three {
-      margin-top: 8px;
-    }
+    margin-top: 10px;
   }
+
+  &:after {
+    display: block;
+    content: "";
+    height: 4px;
+    width: 35px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-top: 6px;
+  }
+  //&__line {
+  //  height: 4px;
+  //  width: 35px;
+  //  border-radius: 3px;
+  //  background-color: #fff;
+  //  transition: 0.3s;
+  //  z-index: 9999;
+  //
+  //  &_one:hover {
+  //    transform: rotate(45deg);
+  //    display: none;
+  //  }
+  //
+  //  &_two {
+  //    margin-top: 8px;
+  //    display: none;
+  //    &:hover {
+  //      display: none;
+  //    }
+  //  }
+  //
+  //  &_three {
+  //    margin-top: 8px;
+  //    display: none;
+  //    &:hover {
+  //      transform: rotate(-45deg);
+  //    }
+  //  }
+  //}
 
   &:hover {
     .hamburger__menu {
-      display: block;
+      display: none;
     }
   }
 }

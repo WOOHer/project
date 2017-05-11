@@ -1,7 +1,4 @@
 .welcome {
-  background-image: url('../img/welcome-bg.jpg');
-  background-position: center;
-  background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -15,6 +12,28 @@
   & .social__item:hover {
     fill: #fff;
     opacity: 1;
+  }
+}
+
+.head__bg {
+  position: absolute;
+  background-image: url('../img/paralax/sand.jpg');
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  background-size: cover;
+  width: 3058px;
+  height: 100%;
+  z-index: -99;
+  overflow: hidden;
+  animation: bg 20s linear infinite;
+}
+
+@keyframes bg {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-3058px);
   }
 }
 
