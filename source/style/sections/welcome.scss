@@ -17,15 +17,15 @@
 
 .head__bg {
   position: absolute;
-  background-image: url('../img/paralax/sand.jpg');
-  background-position: bottom left;
-  background-repeat: repeat-x;
+  background: url('../img/paralax/sand2.jpg') bottom left repeat-x;
   background-size: cover;
-  width: 3058px;
+  width: 6115px;
   height: 100%;
   z-index: -99;
   overflow: hidden;
-  animation: bg 20s linear infinite;
+  animation: bg 120s linear infinite;
+  left: 0;
+  top: 0;
 }
 
 @keyframes bg {

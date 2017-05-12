@@ -1,16 +1,7 @@
 section.welcome
-     .head__bg
-     .welcome__text
-        .float-square
-            include ../common/_user
-            include ../common/_socials
-            .nav-btns
-                ul.nav__items
-                    li.nav__item
-                        a(href="/works.html") Мои работы
-                    li.nav__item
-                        a(href="/about.html") Обо мне
-                    li.nav__item
-                        a(href="blog.html") Блог
-     include ../sections/_login
+    .head__bg
+    .flip-container(ontouchstart="this.classList.toggle('hover');")
+        .flipper
+            include ../sections/_presentation
+            include ../sections/_login
 

@@ -1,5 +1,5 @@
 .float-square_login {
-  display: none;
+  display: block;
   & .input-area {
     width: 340px;
   }
@@ -9,7 +9,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 20px 0;
+  padding: 0 20px 0;
+  margin-top: 1px;
 }
 
 .login-form {
@@ -19,7 +20,7 @@
 
 .login__title {
   color: #ffffff;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 
   &.subtitle {
     font-weight: 300;
@@ -95,7 +96,7 @@
 .bot-checkbox {
   text-align: center;
   color: rgba(#ffffff, .8);
-  margin-bottom: 39px;
+  margin-bottom: 41px;
 
   & p {
     font-weight: bold;
