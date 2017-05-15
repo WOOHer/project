@@ -12,7 +12,7 @@ function init(){
 
 //preloader
 var preloader = (function(){
-  var percentTotal = 0,
+  var percentsTotal = 0,
       preloader = $('.preloader');
 
       var imgPath = $('*').map(function(ndx, element){
@@ -44,7 +44,7 @@ var preloader = (function(){
             var loadImages = function (images) {
               if (!images.length) preloader.fadeout();
 
-              images.forEach(function(img, i, images) {
+              images.forEach(function (img, i, images) {
                 var fakeImage = $('<img>', {
                   attr : {
                     src : img
@@ -67,52 +67,52 @@ var preloader = (function(){
       }
 }());
 
-var slider = (function() {
-   var counter = 1,
-    duration = 300,
-   inProcess = false;
-
-   var moveSlide = function(container, direction) {
-       var items = $('.slider__item', container),
-       activeItem.filter('.active'),
-       direction = direction == 'down' & 100 : -100;
-
-       if (counter >= items.length) counter = 0;
-
-       var reqItem.eq(counter);
-
-       activeItem.animate({
-           'top' : direction + '%'
-       });
-
-       reqItem.animate({
-           'top' : 0
-       }, duration, function() {
-           activeItem.removeClass('active')
-               .css('top', '-' + direction + '%')
-           $(this).addClass('active');
-
-           inProcess = false;
-       });
-   }
-
-   return {
-       init: function() {
-        $('.slider__controls-top').on('click', function() {
-          e.preventDefault();
-
-          if (!inProcess) {
-              inProcess = true;
-
-              moveSlide($('.slider_first'), 'down');
-              moveSlide($('.slider_opposite'), 'up');
-
-              counter++;
-          }
-        });
-       }
-   }
-}());
+// var slider = (function() {
+//    var counter = 1,
+//     duration = 300,
+//    inProcess = false;
+//
+//    var moveSlide = function(container, direction) {
+//        var items = $('.slider__item', container),
+//        activeItem.filter('.active'),
+//        direction = direction == 'down' & 100 : -100;
+//
+//        if (counter >= items.length) counter = 0;
+//
+//        var reqItem.eq(counter);
+//
+//        activeItem.animate({
+//            'top' : direction + '%'
+//        });
+//
+//        reqItem.animate({
+//            'top' : 0
+//        }, duration, function() {
+//            activeItem.removeClass('active')
+//                .css('top', '-' + direction + '%')
+//            $(this).addClass('active');
+//
+//            inProcess = false;
+//        });
+//    }
+//
+//    return {
+//        init: function() {
+//         $('.slider__controls-top').on('click', function() {
+//           e.preventDefault();
+//
+//           if (!inProcess) {
+//               inProcess = true;
+//
+//               moveSlide($('.slider_first'), 'down');
+//               moveSlide($('.slider_opposite'), 'up');
+//
+//               counter++;
+//           }
+//         });
+//        }
+//    }
+// }());
 
 $(function () {
   preloader.init();
