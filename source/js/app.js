@@ -188,31 +188,26 @@ $(function () {
 
 });
 
-flip
-// $(document).ready(function () {
-//     $('.auth-btn').on('click', function () {
-//         $('.welcome__text').hide(function () {
-//
-//         });
-//     })
-// });
-
+//flip
 $(document).ready(function(){
-    $('[name=float-square]').change(function(){
-        $('.welcome__text').hide();
-        float-square_login=$(this).val();
-        $('.float-square_login').show();
+    $('.auth-btn').on('click', function(e){
+        e.preventDefault();
+        $('.flipper').addClass('.flipper__back');
     });
 });
 
-// document.querySelector('.auth-btn').onclick = function(e) {
-//     doFlip();
-//     this.classList.toggle('.welcome__text');
-// };
-// var doFlip = () => {
-//     flipper.classList.toggle('float-square_login');
-// }
+//hamburger
+$(document).ready(function(){
+    $('.hamburger').on('click', function(){
+        $('.hamburger__menu').hide();
+    });
+});
 
-// $('.auth-btn').on('click', function () {
-//     $('.float-square_login').addClass('.active');
-// })
+//flipper
+// (function (){
+//     $('.auth-btn').click(function() {
+//         setTimeout(function(){
+//             $('.float-square').slideToggle(500);
+//         }, 700);
+//     });
+// }());
