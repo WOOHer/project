@@ -2,10 +2,8 @@
   perspective: 1000;
 }
 
-.flip-container .flipper {
-  &__back {
+.flip-active {
     transform: rotateY(180deg);
-  }
 }
 
 .flip-container, .welcome__text, .login {

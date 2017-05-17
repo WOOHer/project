@@ -42,6 +42,7 @@
   top: 37px;
   right: 103px;
   transition: .5s;
+  background-color: transparent;
 
   &:hover {
     background-color: #ffffff;
@@ -114,6 +115,10 @@
 .main-btn, .login-btn {
   padding: 12px 30px;
   width: 100%;
+  border-top: none;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
 }
 
 .login-btn {

@@ -1,3 +1,5 @@
+'use strict';
+
 //map
 ymaps.ready(init);
 var myMap;
@@ -189,17 +191,33 @@ $(function () {
 });
 
 //flip
-$(document).ready(function(){
-    $('.auth-btn').on('click', function(e){
-        e.preventDefault();
-        $('.flipper').addClass('.flipper__back');
-    });
-});
+// $(document).ready(function(){
+//     $('.auth-btn').on('click', function(e){
+//         e.preventDefault();
+//         $('.flipper').addClass('.flipper__back');
+//     });
+// });
+
+var button_log = document.querySelector('.auth-btn');
+
+if(button_log) {
+    button_log.onclick = function(e) {
+        let flipper = document.querySelector('.flipper');
+        let button  = document.querySelector('.auth-btn');
+        let main    = document.querySelector('.main-btn');
+        flipper.classList.add("flip-active");
+        button.style.display = 'none';
+        main.onclick = function(e) {
+            flipper.classList.remove("flip-active");
+            button.style.display = 'block';
+        };
+    };
+};
 
 //hamburger
 $(document).ready(function(){
-    $('.hamburger').on('click', function(){
-        $('.hamburger__menu').hide();
+    $('.menu-toggler').on('click', function(){
+        $('body').toggleClass('fixed');
     });
 });
 
