@@ -2,14 +2,62 @@
 
 //map
 ymaps.ready(init);
-var myMap;
+var myMap,
+    myPlacemark1,
+    myPlacemark2;
 
 function init(){
-  myMap = new ymaps.Map('map', {
-    center: [58.605717, 49.665167],
-    zoom: 12,
-    controls: ['default','routeEditor','smallMapDefaultSet'],
-  });
+    myMap = new ymaps.Map("map", {
+        center: [58.605717, 49.665167],
+        zoom: 12,
+        controls: ["default","routeEditor","smallMapDefaultSet"],
+    });
+
+    myMap.controls
+        .add("trafficControl","typeSelector")
+    myMap.controls
+        .get("trafficControl")
+        .showTraffic()
+    myMap.controls
+        .remove("geolocationControl")
+        .remove("rulerControl")
+        .remove("searchControl");
+
+    myMap.behaviors.disable([
+        'scrollZoom', 'drag'
+    ]);
+
+    myPin = new ymaps.GeoObjectCollection({}, {
+        iconLayout: 'default#image',
+        iconImageHref: '/img/icons/map-marker.svg',
+        iconImageSize: [46, 58],
+        iconImageOffset: [-23, -70]
+    });
+
+
+    myPlacemark1 = new ymaps.Placemark([58.605717, 49.665167], {
+        balloonContentHeader: '<img src="img/icons/favic.ico" alt="Офис" title="Офис" class="map__pic"><span class="map__red">Киров</span>',
+        balloonContentBody: 'К.Либкнехта 68',
+        balloonContentFooter: 'Офис компании',
+        hintContent: 'Ломбард ТИТАН',
+    });
+
+    myPlacemark2 = new ymaps.Placemark([58.635717, 49.635167], {
+        balloonContentHeader: '<img src="img/icons/favic.ico" alt="Офис" title="Офис" class="map__pic"><span class="map__red">Киров</span>',
+        balloonContentBody: 'К.Либкнехта 68',
+        balloonContentFooter: 'Офис компании',
+        hintContent: 'Ломбард ТИТАН',
+    });
+
+    myPlacemark3 = new ymaps.Placemark([58.644549, 49.618414], {
+        balloonContentHeader: '<img src="img/icons/favic.ico" alt="Офис" title="Офис" class="map__pic"><span class="map__red">Киров</span>',
+        balloonContentBody: 'К.Либкнехта 68',
+        balloonContentFooter: 'Офис компании',
+        hintContent: 'Ломбард ТИТАН',
+    });
+
+    myPin.add(myPlacemark1).add(myPlacemark2).add(myPlacemark3);
+    myMap.geoObjects.add(myPin);
 }
 
 //preloader
@@ -222,13 +270,44 @@ $(document).ready(function(){
     $('.menu__picker').on('click', function(){
         $('.blog__menu').toggleClass('shown');
     });
+    $('.blog-menu__item').on('click', function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.blog__menu').toggleClass('shown');
+    });
 });
 
-//flipper
-// (function (){
-//     $('.auth-btn').click(function() {
-//         setTimeout(function(){
-//             $('.float-square').slideToggle(500);
-//         }, 700);
+//form
+// $(function () {
+//     $('#order-form').on('submit', function(e) {
+//         e.preventDefault();
+//
+//         var
+//             form = $(this),
+//             formData = form.serialize();
+//
+//         $.ajax({
+//             url: '../php/mail.php',
+//             type: 'POST',
+//             data: formData,
+//             success: function (data) {
+//
+//                 var popup = data.status ? '#success' : '#error';
+//
+//                 $.fancybox.open({
+//                     src  : popup,
+//                     type : 'inline',
+//                     opts : {
+//                         afterClose: function () {
+//                             form.trigger('reset');
+//                         }
+//                     }
+//                 });
+//             }
+//         });
 //     });
-// }());
+//
+//     $('.popup__close').on('click', function (e) {
+//         e.preventDefault();
+//         $.fancybox.close();
+//     });
+// });

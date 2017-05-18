@@ -15,8 +15,10 @@
     background: rgba($orange, .9);
     height: 100vh;
     top: 0;
-    left: -25%;
+    left: -36%;
     transition: .9s;
+    padding-right: 20px;
+    width: 36%;
   }
 }
 
@@ -39,16 +41,26 @@
   cursor: pointer;
 }
 
-.blog__menu_item {
+.blog-menu__item {
   padding: 15px 20px;
   vertical-align: middle;
 
-  &:nth-child(1) {
+  &.active {
     border-right: 4px solid $orange;
-    margin-right: -4px;
+
+    @include lowres {
+      border-right: 4px solid #fff;
+    }
   }
 }
 
-.blog__menu_item a {
+.blog-menu__link {
+}
+
+.blog-menu__item a {
   color: $gray;
+
+  @include lowres {
+    color: #ffffff;
+  }
 }
