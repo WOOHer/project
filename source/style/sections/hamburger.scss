@@ -3,7 +3,6 @@
 }
 
 .menu-toggler {
-  z-index: 99;
   height: 28px;
   width: 35px;
   position: absolute;
@@ -43,26 +42,6 @@
       top: calc(28px / 5 * 4);
     }
   }
-
-  //&:hover {
-  //
-  //  & .menu-toggler__line {
-  //    &_one {
-  //      transform: rotate(45deg);
-  //      margin-top: 14px;
-  //    }
-  //    &_two {
-  //      background: transparent;
-  //    }
-  //    &_three {
-  //      transform: rotate(-45deg);
-  //      margin-top: -14px;
-  //    }
-  //  }
-  //  & .hamburger__menu {
-  //    display: block;
-  //  }
-  //}
 }
 
 .input-toggler:checked ~ .menu-toggler .menu-toggler__line {

@@ -5,7 +5,7 @@
   min-height: 650px;
   width: 100%;
 
-  @include tablets {
+  @include lowres {
     flex-wrap: nowrap;
     height: auto;
   }
@@ -21,7 +21,7 @@
   align-items: center;
   text-align: center;
 
-  @include tablets {
+  @include lowres {
     width: 100%;
     padding: 60px;
   }
@@ -69,7 +69,7 @@
 }
 
 .slider__section {
-  flex: 2;
+  flex: 4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +78,7 @@
   width: 50%;
   background-color: #ebe5db;
 
-  @include tablets {
+  @include lowres {
     width: 100%;
     order: -1;
     padding: 58px;
@@ -99,10 +99,16 @@
 }
 
 .thumbnail__section {
-  flex: 1;
+  flex: 4;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  overflow: hidden;
+  width: 50%;
+
+  @include lowres {
+    width: 100%;
+  }
 
   @include iphones {
     height: 100%;
@@ -116,10 +122,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @include tablets {
-      padding: 110px;
-    }
 
     @include phones {
       padding: 88px;
@@ -159,15 +161,32 @@
   }
 }
 
+.slideshow__link {
+  height: 100%;
+
+  @include lowres {
+    width: 100%;
+  }
+}
+
+.slideshow__pic {
+  height: 100%;
+  width: 100%;
+
+  @include lowres {
+    width: 100%;
+  }
+}
+
 .move-down-arrow__body {
   height: 27px;
   width: 43px;
   fill: #fff;
   border-radius: 1px;
   position: absolute;
-  margin: -13px 0 0 -21px;
   z-index: 1;
   filter: drop-shadow(0 -0.5px 0.8px $black);
+  @include centrize;
 
   &:hover {
     opacity: .5;
@@ -186,9 +205,9 @@
   border-radius: 1px;
   position: absolute;
   transform: rotate(180deg);
-  margin: -13px 0 0 -21px;
   z-index: 1;
   filter: drop-shadow(0 -0.5px 0.8px $black);
+  @include centrize;
 
   &:hover {
     opacity: .5;
@@ -197,12 +216,6 @@
   @include lowres {
     height: 20px;
     width: 35px;
-  }
-}
-
-.move-up-arrow__body, .move-down-arrow__body {
-  @include lowres {
-    margin-left: -19px;
   }
 }
 

@@ -3,7 +3,6 @@
   color: $black;
   position: relative;
   line-height: 60px;
-  z-index: 99;
 
   @include lowres {
     font-size: 50px;

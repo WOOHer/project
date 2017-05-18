@@ -219,6 +219,9 @@ $(document).ready(function(){
     $('.menu-toggler').on('click', function(){
         $('body').toggleClass('fixed');
     });
+    $('.menu__picker').on('click', function(){
+        $('.blog__menu').toggleClass('shown');
+    });
 });
 
 //flipper

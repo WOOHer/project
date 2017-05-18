@@ -24,10 +24,10 @@
   background-color: #faf8f0;
   padding-top: 42px;
 
-  @include tablets {
+  @include lowres {
     justify-content: center;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
@@ -35,7 +35,7 @@
   width: 75%;
   padding: 12px 20px 0 0;
 
-  @include tablets {
+  @include lowres {
     width: 100%;
     padding: 0;
   }
@@ -56,7 +56,7 @@
     width: 90%;
   }
 
-  @include tablets {
+  @include lowres {
     width: 100%;
   }
 }
@@ -99,6 +99,10 @@
   &:before {
     top: -5px;
 
+    @include lowres {
+      top: 1px;
+  }
+
     @include tablets {
       top: 23px;
     }
@@ -106,6 +110,10 @@
 
   &:after {
     top: -5px;
+
+    @include lowres {
+      top: 1px;
+  }
 
     @include tablets {
     top: 23px;
@@ -162,5 +170,6 @@
   display: none;
   @include lowres {
     display: block;
+    bottom: 40px;
   }
 }
