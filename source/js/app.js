@@ -277,37 +277,37 @@ $(document).ready(function(){
 });
 
 //form
-// $(function () {
-//     $('#order-form').on('submit', function(e) {
-//         e.preventDefault();
-//
-//         var
-//             form = $(this),
-//             formData = form.serialize();
-//
-//         $.ajax({
-//             url: '../php/mail.php',
-//             type: 'POST',
-//             data: formData,
-//             success: function (data) {
-//
-//                 var popup = data.status ? '#success' : '#error';
-//
-//                 $.fancybox.open({
-//                     src  : popup,
-//                     type : 'inline',
-//                     opts : {
-//                         afterClose: function () {
-//                             form.trigger('reset');
-//                         }
-//                     }
-//                 });
-//             }
-//         });
-//     });
-//
-//     $('.popup__close').on('click', function (e) {
-//         e.preventDefault();
-//         $.fancybox.close();
-//     });
-// });
+$(function () {
+    $('#order-form').on('submit', function(e) {
+        e.preventDefault();
+
+        var
+            form = $(this),
+            formData = form.serialize();
+
+        $.ajax({
+            url: '../php/mail.php',
+            type: 'POST',
+            data: formData
+            // success: function (data) {
+            //
+            //     var popup = data.status ? '#success' : '#error';
+            //
+            //     $.fancybox.open({
+            //         src  : popup,
+            //         type : 'inline',
+            //         opts : {
+            //             afterClose: function () {
+            //                 form.trigger('reset');
+            //             }
+            //         }
+            //     });
+            // }
+        });
+    });
+
+    // $('.popup__close').on('click', function (e) {
+    //     e.preventDefault();
+    //     $.fancybox.close();
+    // });
+});

@@ -80,10 +80,12 @@
 
   &_send {
     border-radius: 0 0 0 5px;
+    border-style: none;
   }
 
   &_clear {
     border-radius: 0 0 5px 0;
+    border-style: none;
   }
 
   &_send, &_clear {

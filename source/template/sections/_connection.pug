@@ -10,8 +10,8 @@
             label.input-block
             textarea(type="text", name="comments", placeholder="Ваше сообщение").input-area.text-area
     .form__btns
-        .form__btns_send Отправить
-        .form__btns_clear Очистить
+        input(type="submit", value="Отправить").form__btns_send
+        input(type="reset", value="Очистить").form__btns_clear
 .up-arrow
     svg.up-arrow__body
         use(xlink:href="./assets/img/sprite.svg#arrow_down")
