@@ -76,7 +76,7 @@
 .form__btns {
   display: flex;
   justify-content: space-between;
-  margin-left: -2px;
+  margin-left: -22px;
 
   &_send {
     border-radius: 0 0 0 5px;
@@ -86,6 +86,7 @@
   &_clear {
     border-radius: 0 0 5px 0;
     border-style: none;
+    margin-right: -20px;
   }
 
   &_send, &_clear {

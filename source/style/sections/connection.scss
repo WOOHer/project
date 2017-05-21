@@ -13,12 +13,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 30px 20px 20px;
-
+  overflow: hidden;
+  padding: 0 20px;
 }
 
 .connect-form__title {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
+  margin-top: 25px;
 }
 
 .input-area {
@@ -66,7 +67,7 @@ input[type='password']::placeholder {
 }
 
 textarea.input-area {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .up-arrow {

@@ -167,16 +167,18 @@ var slider = (function () {
 var slideShow = (function () {
     return {
         init: function () {
-            $('.slideshow__link').on('click', function (e) {
+            $('.move-arrow').on('click', function (e) {
                 e.preventDefault();
 
                 var $this = $(this),
-                    container = $this.closest('.slider__section'),
-                    path = $this.attr('href'),
+                    container = $this.closest('.slider').find('.slider__section'),
+                    link = $this.closest('.thumbnail__bg').siblings('.slideshow__link'),
+                    path = link.attr('href'),
                     display = container.find('.slider__section_pic'),
                     preloader = $('#preloader'),
                     fadedOut = $.Deferred(),
                     loaded = $.Deferred();
+                display.hide();
 
                 display.fadeOut(function() {
                     fadedOut.resolve();
@@ -286,7 +288,7 @@ $(function () {
             formData = form.serialize();
 
         $.ajax({
-            url: '../php/mail.php',
+            url: './assets/php/mail.php',
             type: 'POST',
             data: formData
             // success: function (data) {

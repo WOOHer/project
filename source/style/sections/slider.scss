@@ -69,7 +69,7 @@
 }
 
 .slider__section {
-  flex: 4;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,16 +90,15 @@
 
   &_pic {
     align-self: center;
-    width: 70%;
 
     @include laptops {
-      width: 90%;
+      width: 100%;
     }
   }
 }
 
 .thumbnail__section {
-  flex: 4;
+  flex: 2;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -114,7 +113,7 @@
     height: 100%;
   }
 
-  &_left {
+  &_item {
     //background: url('../img/slide_2.png') center center no-repeat;
     //background-size: cover;
     width: 50%;
@@ -123,13 +122,13 @@
     justify-content: center;
     align-items: center;
 
-    @include phones {
-      padding: 88px;
-    }
-
-    @include iphones {
-      padding: 58px;
-    }
+    //@include phones {
+    //  padding: 88px;
+    //}
+    //
+    //@include iphones {
+    //  padding: 58px;
+    //}
 
     &:after {
       content: "";
@@ -138,35 +137,20 @@
       height: 100%;
       background-color: rgba(#c3bdae, .7);
       position: absolute;
+      transition: .5s;
     }
-  }
 
-  &_right {
-    //background: url('../img/slide_3.png') center center no-repeat;
-    //background-size: cover;
-    width: 50%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(#8d8367, .5);
-      position: absolute;
+    &:hover {
+      &:after {
+        background-color: rgba(#8d8367, .5);
+      }
     }
   }
 }
 
 .slideshow__link {
   height: 100%;
-
-  @include lowres {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .slideshow__pic {
@@ -178,33 +162,16 @@
   }
 }
 
+.move-arrow {
+  cursor: pointer;
+}
+
 .move-down-arrow__body {
   height: 27px;
   width: 43px;
   fill: #fff;
   border-radius: 1px;
   position: absolute;
-  z-index: 1;
-  filter: drop-shadow(0 -0.5px 0.8px $black);
-  @include centrize;
-
-  &:hover {
-    opacity: .5;
-  }
-
-  @include lowres {
-    height: 20px;
-    width: 35px;
-  }
-}
-
-.move-up-arrow__body {
-  height: 27px;
-  width: 43px;
-  fill: #fff;
-  border-radius: 1px;
-  position: absolute;
-  transform: rotate(180deg);
   z-index: 1;
   filter: drop-shadow(0 -0.5px 0.8px $black);
   @include centrize;
